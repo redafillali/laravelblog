@@ -17,14 +17,3 @@ use \App\Http\Controllers\AdminController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::prefix('admin')->name('admin.')->group(function () {
-    Route::middleware('guest:web')->group(function () {
-        Route::view('/login', 'back.pages.auth.login')->name('login');
-        Route::view('/forgot-password', 'back.pages.auth.forgot')->name('forgot-password');
-    });
-
-    Route::middleware([])->group(function () {
-        Route::get('/home', [AdminController::class, 'index'])->name('home');
-    });
-});

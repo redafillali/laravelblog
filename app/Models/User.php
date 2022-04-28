@@ -21,7 +21,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'username',
+        'picture',
+        'biography',
+        'type_id',
+        'blocked',
+        'direct_publish',
     ];
+
+    
 
     /**
      * The attributes that should be hidden for serialization.
@@ -41,4 +49,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the user's type.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+
+    public function type()
+    {
+        return $this->hasOne(Type::class, 'id', 'type_id');
+    }
 }

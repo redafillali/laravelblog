@@ -21,15 +21,18 @@
         <link href="./back/dist/css/tabler-payments.min.css" rel="stylesheet" />
         <link href="./back/dist/css/tabler-vendors.min.css" rel="stylesheet" />
         @stack('stylesheets')
+        @livewireStyles
         <link href="./back/dist/css/demo.min.css" rel="stylesheet" />
     </head>
 
     <body>
         <div class="wrapper">
             @include('back.partials.sidebar')
+            @include('back.partials.header')
             @yield('content')
         </div>
         @include('back.partials.footer')
+        @livewireScripts
     </body>
 
 </html>
