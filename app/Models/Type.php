@@ -12,8 +12,6 @@ class Type extends Model
     protected $fillable = [
         'name',
         'description',
-        'image',
-        'status',
         'created_by',
         'updated_by',
     ];

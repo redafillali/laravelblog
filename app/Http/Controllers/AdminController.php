@@ -14,7 +14,8 @@ class AdminController extends Controller
     
     public function index(Request $request) {
         $pageTitle = 'Dashboard';
-        return view('back.pages.home', compact('pageTitle'));
+        $user = Auth::user();
+        return view('back.pages.home', compact('pageTitle', 'user'));
     }
 
     /**
