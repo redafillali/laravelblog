@@ -15,8 +15,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
         Route::prefix('users')->name('users.')->group(function () {
             Route::get('/', [UserController::class, 'index'])->name('index');
-            Route::get('/create', [UserController::class, 'create'])->name('create');
-            Route::post('/store', [UserController::class, 'store'])->name('store');
             Route::get('/{id}/edit', [UserController::class, 'edit'])->name('edit');
             Route::put('/{id}/update', [UserController::class, 'update'])->name('update');
             Route::delete('/{id}/destroy', [UserController::class, 'destroy'])->name('destroy');

@@ -27,7 +27,7 @@
                         <td data-label="{{__('Username')}}">
                             <div class="d-flex py-1 align-items-center">
                                 <span class="avatar me-2"
-                                    style="background-image: url(./back/static/avatars/010m.jpg)"></span>
+                                    style="background-image: url('{{Storage::url($user->picture)}}')"></span>
                                 <div class="flex-fill">
                                     <div class="font-weight-medium">{{ $user->username }}</div>
                                 </div>
@@ -44,7 +44,7 @@
                         </td>
                         <td>
                             <div class="btn-list flex-nowrap">
-                                <a href="#" class="btn">
+                                <a href="{{route('admin.users.edit', $user->id)}}" class="btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
                                         stroke="currentColor" fill="none" stroke-linecap="round"

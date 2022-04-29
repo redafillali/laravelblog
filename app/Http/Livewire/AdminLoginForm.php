@@ -4,9 +4,6 @@ namespace App\Http\Livewire;
 
 use App\Models\User;
 use Livewire\Component;
-use Livewire\WithFileUploads;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 
 

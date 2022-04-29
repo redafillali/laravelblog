@@ -13,7 +13,8 @@ class AdminController extends Controller
      **/
     
     public function index(Request $request) {
-        return view('back.pages.home');
+        $pageTitle = 'Dashboard';
+        return view('back.pages.home', compact('pageTitle'));
     }
 
     /**
